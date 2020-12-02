@@ -1,0 +1,24 @@
+<mat-toolbar color="accent">
+    <!-- <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+      </button>
+      </div> -->
+      
+      <span>
+          <a (click)="onToggleSidenav()" routerLink="/">Admin page</a>
+        
+      </span> 
+      <span class="spacer"> </span>
+  <ul>
+    <li > 
+    <a mat-button routerLink="/addPages" routerLinkActive="mat-light">add pages</a></li>
+    <!-- <li >
+      <a mat-button routerLink="/login" routerLinkActive="mat-light"> login</a></li> -->
+      <!-- <li >
+        <a mat-button routerLink="/signup" routerLinkActive="mat-light"> signup</a></li> -->
+        <!-- <li >
+          <button mat-button > logout </button></li> -->
+  </ul>
+  </mat-toolbar>
+  
