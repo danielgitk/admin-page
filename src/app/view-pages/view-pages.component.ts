@@ -13,7 +13,7 @@ import { Page } from '../page.model';
 export class ViewPagesComponent implements OnInit {
   pages : Page[]=[];
   @ViewChild(MatSort) sort: MatSort;
-  constructor(  public router:Router) { }
+  constructor(  public router:Router,private pageService:PagesService) { }
   public displayedColumns = ['name','title', 'url',  'details',
 'delete'
 ];
@@ -25,7 +25,7 @@ public dataSource = new MatTableDataSource<Page>();
   }
   
   public getAllTeachers = () => {
-    // this.repoService.getData('api/Teacher')
+    // this.pageService.getPosts('api/Pages')
     // .subscribe(res => {
      
     this.pages = 

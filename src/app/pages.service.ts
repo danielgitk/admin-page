@@ -14,26 +14,24 @@ export class PagesService{
 
     constructor ( private router: Router){}
 
-    // getTeachers(){
-    //     this.http.get<{message: string; teachers: any}>('http://localhost:3000/api/teachers')
+    // getPages(){
+    //     this.http.get<{message: string; pages: any}>('http://localhost:3000/api/pages')
     //     .pipe(
     //         map((returnData) =>{
-    //         return returnData.teachers.map(teacher => {
+    //         return returnData.pages.map(page => {
     //             return {
-    //                 id: teacher._id,  
-    //                 name: teacher.name,
-    //                 age: teacher.university,
-    //                 department: teacher.department,
-    //                 hiredPos: teacher.hiredPos,
-    //                 gradField:teacher.gradField,
-    //                 gradUniv: teacher.gradUniv,
-    //                 currentUniv:teacher.currentUniv
+    //                 id: page._id,  
+    //                 name: page.name,
+    //                 url: page.url,
+    //                 title: page.title,
+    //                 content: page.content
+    //              
     //             };
     //         });
     //     }))
     //     .subscribe(localtrs => {
-    //         this.teachers = localtrs;
-    //         this.teacherUpdated.next([...this.teachers]);
+    //         this.pages = localtrs;
+    //         this.pageUpdated.next([...this.pages]);
     //     });
 
     // }
@@ -56,16 +54,6 @@ export class PagesService{
         //     this.router.navigate(["/"]);
         // })
 
-    }
-    // getTeacher(teacherId:string){
-    //     return this.http.get<{_id:string,name: string,age: number,department: string,hiredPos: string,gradYear: string,gradField: string,gradUniv: string,currentUniv: string}>("http://localhost:3000/"+teacherId);
-
-    // }
-    // deleteTeacher(teacherId: string){
-    //     return this.http.delete("http://localhost:3000"+teacherId);
-    // }
-
-    // updateTeacher(teacherId:string,name: string,age: number,department: string,hiredPos: string,gradYear: string,gradField: string,gradUniv: string,currentUniv: string){
-
-    // }
+  
+}
 }
