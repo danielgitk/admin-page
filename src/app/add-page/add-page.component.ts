@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { PagesService } from '../pages.service';
 @Component({
   selector: 'app-add-page',
   templateUrl: './add-page.component.html',
@@ -10,21 +11,16 @@ export class AddPageComponent implements OnInit {
 
   
   private mode = 'create';
-  private teacherId :string;
+  private pageId :string;
   form: FormGroup;
-constructor(public route:ActivatedRoute) { }
+constructor(public route:ActivatedRoute, private pageService: PagesService) { }
 
 ngOnInit(): void {
   this.form = new FormGroup({
     name: new FormControl(null,{validators:[Validators.required,Validators.minLength(3)]}),
     url: new FormControl(null,{validators:[Validators.required]}),
-    department: new FormControl(null,{validators:[Validators.required]}),
-    hiredPos: new FormControl(null,{validators:[Validators.required]}),
-    gradYear: new FormControl(null,{validators:[Validators.required]}),
-    gradField: new FormControl(null,{validators:[Validators.required]}),
-    gradUniv: new FormControl(null,{validators:[Validators.required]}),
-    currentUniv: new FormControl(null,{validators:[Validators.required]})
-
+    title:  new FormControl(null,{validators:[Validators.required]}),
+    content: new FormControl(null,{validators:[Validators.required]})
   })
 
 //   this.route.paramMap.subscribe((paramMap:ParamMap) => {
@@ -65,7 +61,14 @@ ngOnInit(): void {
 // }
 }
 onSavePage(){
+  console.log(this.form)
+  if (this.mode ==='create'){
+    this.pageService.addPage(this.form.value.name,
+      this.form.value.url,
+      this.form.value.title,
+      this.form.value.content
+     );
   
-  this.form.reset();
+  }
 }
 }

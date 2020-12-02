@@ -14,7 +14,7 @@ export class ViewPagesComponent implements OnInit {
   pages : Page[]=[];
   @ViewChild(MatSort) sort: MatSort;
   constructor(  public router:Router) { }
-  public displayedColumns = ['name','title', 'url',  'edit',
+  public displayedColumns = ['name','title', 'url',  'details',
 'delete'
 ];
 

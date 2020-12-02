@@ -17,21 +17,13 @@
 
         <mat-form-field>
             <input matInput type="text" placeholder="title"  formControlName = "title">
-            <mat-error *ngIf="form.get('hiredPos').invalid"> enter title </mat-error>
+            <mat-error *ngIf="form.get('title').invalid"> enter title </mat-error>
         </mat-form-field>
 
         <mat-form-field >
             <input matInput type="text" placeholder="content"  formControlName = "content">
-            <mat-error *ngIf="form.get('gradField').invalid"> Enter content </mat-error>
+            <mat-error *ngIf="form.get('content').invalid"> Enter content </mat-error>
         </mat-form-field>
-        <!-- <mat-form-field >
-            <input matInput type="text" placeholder="graduated from university"  formControlName = "gradUniv">
-            <mat-error *ngIf="form.get('gradUniv').invalid"> Enter graduated from university </mat-error>
-        </mat-form-field>
-        <mat-form-field >
-            <input matInput type="text" placeholder="currently teaching in university" formControlName = "currentUniv">
-            <mat-error *ngIf="form.get('currentUniv').invalid"> Enter currently teaching university </mat-error>
-        </mat-form-field> -->
         
 
 
