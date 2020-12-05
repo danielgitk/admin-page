@@ -1,0 +1,57 @@
+<mat-card>
+   
+  <form (submit)="onSignup(signupForm)" #signupForm="ngForm" >
+    <mat-form-field>
+      <input matInput
+      name="username"
+      ngModel
+      type="text"
+      required
+      username
+      #username="ngModel"
+             
+      
+      placeholder="Username">
+
+      <mat-error *ngIf="username.invalid"> Enter username. </mat-error>
+    </mat-form-field>
+
+   
+  <mat-form-field>
+      <input matInput
+      ngModel
+      required
+      name="password"
+      type="password"
+      #passwordInput = "ngModel"
+      placeholder="password">
+
+      <mat-error *ngIf="passwordInput.invalid"> Enter a valid password. </mat-error>
+
+    
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput
+    ngModel
+    required
+    name="password_confirm"
+    type="password"
+    #passwordConfirm = "ngModel"
+    placeholder=" repeat password">
+
+    <mat-error *ngIf="passwordConfirm.invalid"> repeat the password password. </mat-error>
+
+  
+</mat-form-field>
+
+  
+  <button mat-raised-button 
+  color="accent"
+  type="submit" > Add admin</button>
+
+  </form>
+
+</mat-card>
+
+

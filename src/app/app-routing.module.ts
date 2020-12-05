@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddPageComponent } from './add-page/add-page.component';
-import { ViewPagesComponent } from './view-pages/view-pages.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+
 
 const routes: Routes = [
-  {path: '', component: ViewPagesComponent},
-  {path: 'addPages', component: AddPageComponent}
+ {path: '', component: UserCreateComponent}
+//  {path: 'addPages', component: AddPageComponent}
 ];
 
 @NgModule({
