@@ -20,6 +20,8 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { ToastsComponent } from './toasts/toasts.component';
+import { LoginComponent } from './login/login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { ToastsComponent } from './toasts/toasts.component';
     UserCreateComponent,
     UserListComponent,
     FooterComponent,
-    ToastsComponent
+    ToastsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { ToastsComponent } from './toasts/toasts.component';
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
