@@ -28,7 +28,7 @@ export class PanelListComponent {
   onEdit(e: MouseEvent, id: string) {
     e.preventDefault();
 
-    this.router.navigate(["backend", this.model, id]);
+    this.router.navigate([this.model, id]);
   }
 
   /**

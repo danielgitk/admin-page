@@ -17,7 +17,9 @@ const routes: Routes = [
  {path: 'pages/create' , component: PageCreateComponent},
  {path: 'pages/list' ,component: PageListComponent},
  {path: 'blocks/list', component: BlockListComponent},
- {path: 'dashboard', component:DashboardComponent}
+ {path: 'dashboard', component:DashboardComponent},
+ {  path: ":pageId", component: PageCreateComponent
+},
 ];
 
 

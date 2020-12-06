@@ -1,7 +1,7 @@
-<admin-panel-wrapper>
+<mat-card>
     <section class="main">
       <div class="btn-con">
-        <a class="btn btn-action" routerLink="/backend/blocks/list">View all</a>
+        <a class="btn btn-action" routerLink="/blocks/list">View all</a>
       </div>
       <div class="form" *ngIf="!loading && !notFound">
         <div class="form-group" *ngIf="!block">
@@ -35,5 +35,6 @@
         Block not found
       </div>
     </section>
-  </admin-panel-wrapper>
+ 
+  </mat-card>
   

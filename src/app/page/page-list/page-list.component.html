@@ -1,9 +1,8 @@
-<admin-panel-wrapper>
+<mat-card>
     <section class="main">
       <div class="btn-con">
-        <a class="btn btn-primary" routerLink="/backend/pages/create" >Create new page</a>
+        <a class="btn btn-primary" routerLink="/pages/create" >Create new page</a>
       </div>
       <admin-panel-list [items]="pages" model="pages" (delete)="deletePage($event)"></admin-panel-list>
     </section>
-  </admin-panel-wrapper>
-  
+  </mat-card>

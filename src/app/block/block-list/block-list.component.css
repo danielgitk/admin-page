@@ -1,0 +1,16 @@
+.main {
+    padding: 1rem 0;
+  }
+  .btn-con {
+    padding-bottom: 3rem;
+  }
+  mat-card{
+    margin: auto;    
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    text-align: left;
+    width: 80%;
+    height: auto;
+   
+}
