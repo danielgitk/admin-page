@@ -3,7 +3,7 @@ import { Media } from 'src/app/interfaces';
 import { MediaService } from '../media.service';
 
 @Component({
-  selector: 'app-item',
+  selector: 'media-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })

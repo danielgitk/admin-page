@@ -107,7 +107,7 @@ export class PageService {
       })
       .subscribe(res => {
         if (res.success) {
-          this.router.navigate(["backend", "pages", "list"]);
+          this.router.navigate(["pages", "list"]);
           return;
         }
       });

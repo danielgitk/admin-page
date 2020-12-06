@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Link } from 'src/app/interfaces';
 
 @Component({
-  selector: 'app-link',
+  selector: 'input-link',
   templateUrl: './link.component.html',
   styleUrls: ['./link.component.css']
 })

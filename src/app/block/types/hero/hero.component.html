@@ -1,0 +1,21 @@
+<!-- Media -->
+<div class="form-group" [class.invalid]="errors.image">
+    <label>Background image</label>
+    <media-picker #image [defaultValue]="data?.image"></media-picker>
+    <p class="error-response" *ngIf="errors.image">{{errors.image}}</p>
+  </div>
+  <!-- END Media -->
+  
+  <!-- CTA -->
+  <div class="form-group" [class.invalid]="errors.cta">
+    <label>CTA</label>
+    <input-link #cta [defaultValue]="data?.cta"></input-link>
+    <p class="error-response" *ngIf="errors.cta">{{errors.cta}}</p>
+  </div>
+  <!-- END CTA -->
+  
+  <div class="form-group">
+    <button class="btn btn-success" (click)="validateData(image.value, cta.value)">Save</button>
+    <p class="error-response" *ngIf="!valid">Please fill all fields correctly</p>
+  </div>
+  

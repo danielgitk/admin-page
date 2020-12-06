@@ -11,7 +11,7 @@ export class GuestGuard implements CanActivate {
   canActivate(): Observable<boolean> | Promise<boolean> | boolean {
     if(!localStorage.getItem('token')) return true
 
-    this.router.navigate(['/backend']);
+    this.router.navigate(['']);
     return false;
   }
 }

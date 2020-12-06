@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+  }
+.main .left {
+    width: calc(100% - 320px);
+    padding-right: 16px;
+  }
+.main .right {
+    width: 320px;
+    padding-top: 62px;
+  }
+@media (max-width: 1024px) {
+    .main .left {
+      width: calc(100% - 180px);
+    }
+.main .right {
+      width: 180px;
+    }
+  }
+mat-card {
+    margin: auto;    
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    text-align: left;
+    width: 80%;
+    height: auto;
+   
+}

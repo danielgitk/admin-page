@@ -28,11 +28,16 @@ import { RteComponent } from './input/rte/rte.component';
 import { ItemComponent } from './media/item/item.component';
 import { EditComponent } from './media/edit/edit.component';
 import { ListComponent } from './media/list/list.component';
-import { MediaComponent } from './media/page/media.component';
+ import { MediaComponent } from './media/media/media.component';
 import { PickerComponent } from './media/picker/picker.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { PanelWrapperComponent } from './panel-wrapper/panel-wrapper.component';
 import { PanelListComponent } from './panel-list/panel-list.component';
+import { HeroComponent } from './block/types/hero/hero.component';
+import { PartnerComponent } from './block/types/partner/partner.component';
+import { TextComponent } from './block/types/text/text.component';
+import { TwoColumnsComponent } from './block/types/two-columns/two-columns.component';
+import { AdminPanelOverlayComponent } from './admin-panel-overlay/admin-panel-overlay.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +49,7 @@ import { PanelListComponent } from './panel-list/panel-list.component';
     BlockListComponent,
     PageCreateComponent,
     PageListComponent,
+    MediaComponent,
     UserCreateComponent,
     UserListComponent,
     FooterComponent,
@@ -55,10 +61,14 @@ import { PanelListComponent } from './panel-list/panel-list.component';
     ItemComponent,
     EditComponent,
     ListComponent,
-    MediaComponent,
     PickerComponent,
     PanelWrapperComponent,
-    PanelListComponent
+    PanelListComponent,
+    HeroComponent,
+    PartnerComponent,
+    TextComponent,
+    TwoColumnsComponent,
+    AdminPanelOverlayComponent
   ],
   imports: [
     BrowserModule,

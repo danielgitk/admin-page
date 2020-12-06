@@ -9,6 +9,8 @@ import { PageListComponent } from './page/page-list/page-list.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 import { GuestGuard } from "../app/login/guest.guard";
 import { AuthGuard } from './login/auth.guard';
+import { MediaComponent } from './media/media/media.component';
+// import { MediaComponent } from './media/page/media.component';
 
 const routes: Routes = [
  {path: '',canLoad: [AuthGuard], component: UserCreateComponent},
@@ -18,8 +20,10 @@ const routes: Routes = [
  {path: 'pages/list' ,component: PageListComponent},
  {path: 'blocks/list', component: BlockListComponent},
  {path: 'dashboard', component:DashboardComponent},
- {  path: ":pageId", component: PageCreateComponent
-},
+ {path: 'medias', component: MediaComponent},
+
+ 
+
 ];
 
 

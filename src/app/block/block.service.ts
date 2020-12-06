@@ -64,7 +64,7 @@ export class BlockService {
       })
       .subscribe(res => {
         if (res.success) {
-          this.router.navigate(["backend", "blocks", "list"]);
+          this.router.navigate(["blocks", "list"]);
           return;
         }
       });

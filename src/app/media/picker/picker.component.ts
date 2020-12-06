@@ -3,7 +3,7 @@ import { Media } from 'src/app/interfaces';
 import { MediaService } from '../media.service';
 
 @Component({
-  selector: 'app-picker',
+  selector: 'media-picker',
   templateUrl: './picker.component.html',
   styleUrls: ['./picker.component.css']
 })
