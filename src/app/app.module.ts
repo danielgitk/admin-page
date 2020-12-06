@@ -22,6 +22,17 @@ import { FooterComponent } from './footer/footer.component';
 import { ToastsComponent } from './toasts/toasts.component';
 import { LoginComponent } from './login/login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LinkComponent } from './input/link/link.component';
+import { RteComponent } from './input/rte/rte.component';
+import { ItemComponent } from './media/item/item.component';
+import { EditComponent } from './media/edit/edit.component';
+import { ListComponent } from './media/list/list.component';
+import { MediaComponent } from './media/page/media.component';
+import { PickerComponent } from './media/picker/picker.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { PanelWrapperComponent } from './panel-wrapper/panel-wrapper.component';
+import { PanelListComponent } from './panel-list/panel-list.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +48,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     UserListComponent,
     FooterComponent,
     ToastsComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    LinkComponent,
+    RteComponent,
+    ItemComponent,
+    EditComponent,
+    ListComponent,
+    MediaComponent,
+    PickerComponent,
+    PanelWrapperComponent,
+    PanelListComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +69,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
