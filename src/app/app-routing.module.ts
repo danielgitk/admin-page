@@ -7,20 +7,24 @@ import { LoginComponent } from './login/login.component';
 import { PageCreateComponent } from './page/page-create/page-create.component';
 import { PageListComponent } from './page/page-list/page-list.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
-
+import { GuestGuard } from "../app/login/guest.guard";
+import { AuthGuard } from './login/auth.guard';
 
 const routes: Routes = [
- {path: '', component: UserCreateComponent},
- {path: 'login', component: LoginComponent},
- {path: 'block/create', component: BlockCreateComponent},
- {path: 'page/create' , component: PageCreateComponent},
- {path: 'page/list' ,component: PageListComponent},
- {path: 'block/list', component: BlockListComponent},
- {path:'dashboard', component:DashboardComponent}
+ {path: '',canLoad: [AuthGuard], component: UserCreateComponent},
+ {path: 'login', component: LoginComponent,canActivate: [GuestGuard]},
+ {path: 'blocks/create', component: BlockCreateComponent},
+ {path: 'pages/create' , component: PageCreateComponent},
+ {path: 'pages/list' ,component: PageListComponent},
+ {path: 'blocks/list', component: BlockListComponent},
+ {path: 'dashboard', component:DashboardComponent}
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  providers: [AuthGuard, GuestGuard],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

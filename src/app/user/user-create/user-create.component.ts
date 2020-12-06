@@ -16,8 +16,10 @@ export class UserCreateComponent implements OnInit {
   }
   onSignup(form: NgForm){
     if(form.invalid){
+      localStorage.removeItem("token");
       return
     }
+
      this.userService.saveUser(form.value.email, form.value.password);
       console.log("after auth called");
     }

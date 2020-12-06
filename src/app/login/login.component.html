@@ -3,18 +3,16 @@
     <form  (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
       <mat-form-field>
         <input matInput
-        name="email"
+        name="username"
         ngModel
-        type="email"
         required
-        email
-        #emailInput="ngModel"
+        #username="ngModel"
         
         
         
-        placeholder="E-mail address">
+        placeholder="Username">
 
-        <mat-error *ngIf="emailInput.invalid"> Enter an email. </mat-error>
+        <mat-error *ngIf="username.invalid"> Enter username. </mat-error>
       </mat-form-field>
   
      
