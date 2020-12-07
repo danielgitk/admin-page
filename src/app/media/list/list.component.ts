@@ -35,7 +35,7 @@ export class ListComponent implements OnInit {
 
     for (let i = 0; i < filesLength; i++) {
       const formData = new FormData();
-      formData.append("media", files[i]);
+      formData.append("image", files[i]);
       this.mediaService.uploadMedia(formData);
     }
   }
