@@ -10,17 +10,26 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 import { GuestGuard } from "../app/login/guest.guard";
 import { AuthGuard } from './login/auth.guard';
 import { MediaComponent } from './media/media/media.component';
+import { LayoutComponent } from './layout/layout.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { LaioutComponent } from './layout/laiout/laiout.component';
 // import { MediaComponent } from './media/page/media.component';
 
 const routes: Routes = [
- {path: '',canLoad: [AuthGuard], component: UserCreateComponent},
+ {path: '',canLoad: [AuthGuard], component: DashboardComponent},
  {path: 'login', component: LoginComponent,canActivate: [GuestGuard]},
  {path: 'blocks/create', component: BlockCreateComponent},
  {path: 'pages/create' , component: PageCreateComponent},
  {path: 'pages/list' ,component: PageListComponent},
  {path: 'blocks/list', component: BlockListComponent},
  {path: 'dashboard', component:DashboardComponent},
- {path: 'medias', component: MediaComponent},
+ {path: 'media', component: MediaComponent},
+ {path: 'layout',component:LayoutComponent},
+ {path: 'users/list', component:UserListComponent},
+ {path: 'users/create',component:UserCreateComponent},
+ {path: 'users/:userId', component: UserCreateComponent},
+ {path: 'laiout', component: LaioutComponent}
+ 
 
  
 

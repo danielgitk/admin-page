@@ -38,6 +38,9 @@ import { PartnerComponent } from './block/types/partner/partner.component';
 import { TextComponent } from './block/types/text/text.component';
 import { TwoColumnsComponent } from './block/types/two-columns/two-columns.component';
 import { AdminPanelOverlayComponent } from './admin-panel-overlay/admin-panel-overlay.component';
+import { LaioutComponent } from './layout/laiout/laiout.component';
+import { HeadersComponent} from './layout/header/header.component'
+import {FootersComponent} from './layout/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -68,7 +71,10 @@ import { AdminPanelOverlayComponent } from './admin-panel-overlay/admin-panel-ov
     PartnerComponent,
     TextComponent,
     TwoColumnsComponent,
-    AdminPanelOverlayComponent
+    AdminPanelOverlayComponent,
+    LaioutComponent,
+    HeadersComponent,
+    FootersComponent
   ],
   imports: [
     BrowserModule,

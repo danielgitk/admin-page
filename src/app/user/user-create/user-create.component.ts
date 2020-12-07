@@ -20,10 +20,11 @@ export class UserCreateComponent implements OnInit {
       return
     }
 
-     this.userService.saveUser(form.value.email, form.value.password);
+     this.userService.saveUser(form.value.username, form.value.password);
       console.log("after auth called");
+      this.router.navigate([ 'users', 'list'])
     }
-  //  this.authService.login();
+ 
   }
 
 
