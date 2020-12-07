@@ -1,5 +1,5 @@
 <div class="form-group" [class.invalid]="errors.image">
-    <label>Background image</label>
+    <label>News image</label>
     <media-picker #image [defaultValue]="data?.image"></media-picker>
     <p class="error-response" *ngIf="errors.image">{{errors.image}}</p>
   </div>

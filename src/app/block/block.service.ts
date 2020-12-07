@@ -9,8 +9,7 @@ const RESOURCE_PATH: string = "api/blocks/";
   providedIn: "root"
 })
 export class BlockService {
-  // blockType: string[] = ["hero", "text", "two-col", "partners", "services"];
-  type: string = 'hero';
+  type: string = 'text';
 
   errors: string[] = [];
   selectedBlock: Block;
