@@ -7,10 +7,12 @@
         <div class="form-group" *ngIf="!block">
           <label for="type">Select block type</label>
           <select #inputType id="type" class="form-control" [value]="type" (change)="changeType(inputType.value)">
-            <option value="hero">Hero block</option>
-            <option value="two_columns">Two columns block</option>
+            <!-- <option value="hero">Hero block</option> -->
+            <option value="two_columns">News block</option>
             <option value="text">Text block</option>
-            <option value="partners">Partners block</option>
+            <option value="tender_search">Search block</option>
+            <option value="tender_list">Search Result List</option>
+            <!-- <option value="partners">Partners block</option> -->
           </select>
         </div>
         <div class="form-group" [ngClass]="errors.title ? 'invalid' : false">

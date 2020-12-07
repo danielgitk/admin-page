@@ -7,12 +7,23 @@ ul {
   
   a {
     text-decoration: none;
-    color: black;
+    color: white;
+    /* background-color:white; */
+  }
+  a:hover{
+    /* background-color: white; */
+    color: #345ACB;
   }
   ul{
     display: flex;
   }
-  
+  li{
+    width: 100px;
+  }
+  img{
+    width:30px;
+    height:20px;
+  }
   .spacer {
     flex: 1 1 auto;
   }
