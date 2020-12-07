@@ -28,7 +28,9 @@ const routes: Routes = [
  {path: 'users/list', component:UserListComponent},
  {path: 'users/create',component:UserCreateComponent},
  {path: 'users/:userId', component: UserCreateComponent},
- {path: 'laiout', component: LaioutComponent}
+ {path: 'laiout', component: LaioutComponent},
+ {path: 'pages/:pageId' , component: PageCreateComponent},
+ {path: 'blocks/:blockId', component: BlockCreateComponent}
  
 
  
