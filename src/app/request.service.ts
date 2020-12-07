@@ -177,7 +177,7 @@ export class RequestService {
    */
   private setHeaders(): object {
     return {
-      Authorization: this.getToken()
+      Authorization:'Bearer ' + this.getToken()
     };
   }
 

@@ -22,11 +22,11 @@ export class AuthService {
    * @param username 
    * @param password 
    */
-  login(username: string, password: string) {
+  login(email: string, password: string) {
     console.log("dersenal");
     
     this.http
-      .post("api/login", { username, password }, false)
+      .post("api/auth/login", { email, password }, false)
       .subscribe(response => {
         if (response.success) {
           this.authed = true;
