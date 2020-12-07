@@ -58,7 +58,7 @@ export class PageCreateComponent implements OnInit,OnDestroy {
     this.pageService.getAllBlocks();
 
     this.routeChangeSubscription = this.route.paramMap.subscribe(params => {
-      const pageId: number = +params.get("pageId");
+      const pageId: number = +params.get("/pages/pageId");
       if (!pageId) return;
       this.pageId = pageId;
       this.pageService.getPage(pageId);
