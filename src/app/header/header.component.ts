@@ -6,6 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  [x: string]: any;
 
   @Output() public sidenavToggle = new EventEmitter();
   constructor() { }
@@ -16,4 +17,10 @@ export class HeaderComponent implements OnInit {
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }
+  logout() {
+    localStorage.removeItem("token");
+
+    this.router.navigate(["login"]);
+  }
+
 }
