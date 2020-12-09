@@ -12,7 +12,7 @@ import { RequestService } from '../request.service';
 export class PanelListComponent {
   @Input() items: any;
   @Input() model: string;
-  @Input() hideEdit: boolean =  false;
+  @Input() hideEdit =  false;
   @Output() delete: EventEmitter<any> = new EventEmitter();
 
   deleteIcon = faTrashAlt;
@@ -21,21 +21,20 @@ export class PanelListComponent {
 
   /**
    * On edit click
-   * 
-   * @param e 
-   * @param id 
+   *
+   * @param e
+   * @param id
    */
   onEdit(e: MouseEvent, id: string) {
     e.preventDefault();
-
     this.router.navigate([this.model, id]);
   }
 
   /**
-   * On destroy 
-   * 
-   * @param e 
-   * @param id 
+   * On destroy
+   *
+   * @param e
+   * @param id
    */
   onDelete(e: MouseEvent, id: string) {
     e.preventDefault();

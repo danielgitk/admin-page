@@ -7,15 +7,15 @@
         ngModel
         required
         #username="ngModel"
-        
-        
-        
-        placeholder="Username">
+
+
+
+        placeholder="Email">
 
         <mat-error *ngIf="username.invalid"> Enter username. </mat-error>
       </mat-form-field>
-  
-     
+
+
     <mat-form-field>
         <input matInput
         ngModel
@@ -26,14 +26,14 @@
         placeholder="password">
 
         <mat-error *ngIf="passwordInput.invalid"> Enter a valid password. </mat-error>
-  
+
     </mat-form-field>
     <button mat-raised-button *ngIf="!isLoading"
     color="accent"
     type="submit" > login</button>
     <!-- <mat-spinner *ngIf="isLoading" ></mat-spinner> -->
     </form>
-  
+
   </mat-card>
-  
+
 
