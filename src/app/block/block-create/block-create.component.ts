@@ -46,7 +46,7 @@ export class BlockCreateComponent implements OnInit,OnDestroy {
      * Get block on route change
      */
     this.routeChangeSubscription = this.route.paramMap.subscribe(params => {
-      const blockId: number = +params.get("/blocks/blockId");
+      const blockId: number = +params.get("blockId");
       if (!blockId) return;
       this.blockId = blockId;
       this.blockService.getBlock(blockId);
