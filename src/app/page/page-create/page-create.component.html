@@ -15,13 +15,31 @@
           <p *ngIf="errors.title" class="error-response">{{errors.title}}</p>
         </div>
   
+        <div class="form-group" >
+          <label for="type">Select block type</label>
+          <select #inputType id="type" class="form-control" (change)="changeType(inputType.value)">
+            <!-- <option value="hero">Hero block</option> -->
+            <option value="two_columns">News block</option>
+            <option value="text">Text block</option>
+            <option value="tender_search">Search block</option>
+            <option value="tender_list">Search Result List</option>
+            <!-- <option value="partners">Partners block</option> -->
+          </select>
+        </div>
+
+
+
+
         <div>
           <div class="blocks-picker form-group" [ngClass]="errors.blocks ? 'invalid' : false">
             <div class="left">
               <label class="block-title">Choose blocks</label>
               <div class="blocks-con">
-                <div class="drag" *ngFor="let block of blocks" (click)="addBlock(block)">{{getBlockTitle(block.title)}}
+                
+                <div  *ngFor="let block of blocks">
+                  <div  class="drag" (click)="addBlock(block)" *ngIf="block.type == blockType">    {{getBlockTitle(block.title)}} </div>
                 </div>
+            
               </div>
             </div>
             <div class="right">

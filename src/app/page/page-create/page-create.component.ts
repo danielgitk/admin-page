@@ -15,6 +15,7 @@ export class PageCreateComponent implements OnInit,OnDestroy {
   dragHandlerIcon = faHamburger;
   removeBlockIcon = faTrashAlt;
   pageId: number = 0;
+  blockType: string;
   errors: Errors = {
     slug: false,
     title: false,
@@ -29,6 +30,7 @@ export class PageCreateComponent implements OnInit,OnDestroy {
 
     return this.pageService.selectedPage.slug;
   }
+
 
   get defaultTitle() {
     if (!this.pageService.selectedPage) return "";
@@ -91,6 +93,10 @@ export class PageCreateComponent implements OnInit,OnDestroy {
   addBlock(block: Block) {
     this.pageService.addBlock(block);
   }
+
+  changeType(type: string) {
+    this.blockType = type;
+  console.log("clicked "+ type);  }
 
   /**
    * Remove selected block
