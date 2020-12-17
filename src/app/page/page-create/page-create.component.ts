@@ -16,6 +16,7 @@ export class PageCreateComponent implements OnInit,OnDestroy {
   removeBlockIcon = faTrashAlt;
   pageId: number = 0;
   blockType: string;
+  dodo = false;
   errors: Errors = {
     slug: false,
     title: false,
@@ -94,6 +95,15 @@ export class PageCreateComponent implements OnInit,OnDestroy {
     this.pageService.addBlock(block);
   }
 
+  helloWorld(){
+    if (this.dodo){
+      this.dodo = false;
+    }
+    else{
+      this.dodo = true;
+    }
+
+  }
   changeType(type: string) {
     this.blockType = type;
   console.log("clicked "+ type);  }
