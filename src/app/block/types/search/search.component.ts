@@ -1,11 +1,11 @@
-import { Component, Output, EventEmitter, Input } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: "block-text",
-  templateUrl: "./text.component.html",
-  styleUrls: ["./text.component.css"]
+  selector: 'block-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
-export class TextComponent {
+export class SearchComponent implements OnInit {
   @Input() data: any;
   @Output() submit: EventEmitter<any> = new EventEmitter();
 
@@ -29,7 +29,7 @@ export class TextComponent {
     this.errors = { body: false, color: false };
 
     if (!body) {
-      this.errors.body = "Text is required";
+      this.errors.body = "Image is required";
       this.valid = false;
     }
     if (!color) {
@@ -44,6 +44,12 @@ export class TextComponent {
 
     this.submit.emit({ body, color });
   }
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
 
 interface Errors {

@@ -1,4 +1,4 @@
-<!-- Media -->
+
 <div cdkDropList (cdkDropListDropped)="partnerDrop($event)">
     <div class="form-group" cdkDrag *ngFor="let partner of partners; let i = index;" [class.invalid]="errors.partners[i]">
       <label>Partner Logo</label>
@@ -15,7 +15,6 @@
       <p class="error-response" *ngIf="errors.partners[i]">{{errors.partners[i]}}</p>
     </div>
   </div>
-  <!-- END Media -->
   
   <div class="form-group add-partner-btn-con">
     <button class="btn btn-action" (click)="addPartner()">Add Partner</button>

@@ -10,9 +10,10 @@
             <!-- <option value="hero">Hero block</option> -->
             <option value="two_columns">News block</option>
             <option value="text">Text block</option>
-            <option value="tender_search">Search block</option>
-            <option value="tender_list">Search Result List</option>
-            <!-- <option value="partners">Partners block</option> -->
+            <option value="search">Search block</option>
+            <option value="comment_form">Comment block</option>
+            <!-- <option value="tender_list">Search Result List</option> -->
+            <option value="partners">Partners block</option>
           </select>
         </div>
         <div class="form-group" [ngClass]="errors.title ? 'invalid' : false">
@@ -22,8 +23,12 @@
         </div>
   
         <ng-container [ngSwitch]="type">
-          <block-hero *ngSwitchCase="'hero'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
-          </block-hero>
+          <!-- <block-hero *ngSwitchCase="'hero'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
+          </block-hero> -->
+          <block-search *ngSwitchCase="'search'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
+          </block-search>
+          <block-comment-form *ngSwitchCase="'comment_form'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
+          </block-comment-form>
           <block-text *ngSwitchCase="'text'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
           </block-text>
           <block-two-columns *ngSwitchCase="'two_columns'" (submit)="submitHandler(title.value, $event)"

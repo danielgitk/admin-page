@@ -98,19 +98,19 @@ export class PartnerComponent implements OnInit {
    */
   validateData() {
     this.valid = true;
-    this.errors = { partners: {} };
+    // this.errors = { partners: {} };
 
-    this.partners.map((partner, i) => {
-      if (!partner.id) {
-        this.errors.partners[i] = "Please choose an image";
-        this.valid = false;
-      }
-    });
+    // this.partners.map((partner, i) => {
+    //   if (!partner.id) {
+    //     this.errors.partners[i] = "Please choose an image";
+    //     this.valid = false;
+    //   }
+    // });
 
-    if (!this.valid) {
-      this.submit.emit(false)
-      return;
-    }
+    // if (!this.valid) {
+    //   this.submit.emit(false)
+    //   return;
+    // }
     this.submit.emit({
       partners: this.partners.map(partner => ({ image: partner }))
     });

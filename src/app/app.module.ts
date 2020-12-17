@@ -41,6 +41,8 @@ import { AdminPanelOverlayComponent } from './admin-panel-overlay/admin-panel-ov
 import { LaioutComponent } from './layout/laiout/laiout.component';
 import { HeadersComponent} from './layout/header/header.component'
 import {FootersComponent} from './layout/footer/footer.component'
+import { CommentFormComponent } from './block/types/comment-form/comment-form.component';
+import { SearchComponent } from './block/types/search/search.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,9 @@ import {FootersComponent} from './layout/footer/footer.component'
     AdminPanelOverlayComponent,
     LaioutComponent,
     HeadersComponent,
-    FootersComponent
+    FootersComponent,
+    CommentFormComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
