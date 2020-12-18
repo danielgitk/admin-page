@@ -72,6 +72,9 @@ export class CommentFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if (!this.data) return;
+
+    this.inputFields = this.data.inputFields.map((input: any) => input.label);
   }
 
 }

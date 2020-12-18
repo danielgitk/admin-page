@@ -43,6 +43,7 @@ import { HeadersComponent} from './layout/header/header.component'
 import {FootersComponent} from './layout/footer/footer.component'
 import { CommentFormComponent } from './block/types/comment-form/comment-form.component';
 import { SearchComponent } from './block/types/search/search.component';
+import { OverlayBlockCreateComponent } from './block/block-create copy/block-create.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { SearchComponent } from './block/types/search/search.component';
     TextComponent,
     TwoColumnsComponent,
     AdminPanelOverlayComponent,
+    OverlayBlockCreateComponent,
     LaioutComponent,
     HeadersComponent,
     FootersComponent,

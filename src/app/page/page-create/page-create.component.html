@@ -60,8 +60,8 @@
         </div>
         <button class="btn btn-action" (click)="helloWorld()">Add new Block</button>
         <div *ngIf="dodo">
-          <admin-panel-overlay>
-            <app-block-create></app-block-create>
+          <admin-panel-overlay class="popup">
+            <overlay-block-create></overlay-block-create>
             <button class="btn btn-action" (click)="helloWorld()">Done</button>
           </admin-panel-overlay>
         </div>

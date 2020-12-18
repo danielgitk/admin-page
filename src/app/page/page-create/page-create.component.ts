@@ -5,6 +5,7 @@ import { faHamburger, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { CdkDragDrop } from "@angular/cdk/drag-drop";
 import { ActivatedRoute } from "@angular/router";
 import { Subscription } from "rxjs";
+import { BlockService } from 'src/app/block/block.service';
 
 @Component({
   selector: 'app-page-create',
@@ -53,6 +54,7 @@ export class PageCreateComponent implements OnInit,OnDestroy {
 
   constructor(
     private pageService: PageService,
+    private blockService: BlockService,
     private route: ActivatedRoute
   ) {}
 
@@ -96,8 +98,9 @@ export class PageCreateComponent implements OnInit,OnDestroy {
   }
 
   helloWorld(){
-    if (this.dodo){
+    if (this.dodo){ 
       this.dodo = false;
+      this.pageService.getAllBlocks();
     }
     else{
       this.dodo = true;
