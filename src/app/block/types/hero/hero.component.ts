@@ -11,7 +11,7 @@ export class HeroComponent {
   @Output() submit: EventEmitter<any> = new EventEmitter();
 
   errors: Errors = {
-    image: false,
+    body: false,
     cta: false,
   };
 
@@ -20,15 +20,15 @@ export class HeroComponent {
   /**
    * Validate data and emit submit event if valid
    * 
-   * @param image 
+   * @param body 
    * @param cta 
    */
-  validateData(image: any, cta: Link) {
+  validateData(body: any, cta: Link) {
     this.valid = true;
-    this.errors = { image: false, cta: false };
+    this.errors = { body: false, cta: false };
 
-    if (!image.id) {
-      this.errors.image = "Image is required";
+    if (!body) {
+      this.errors.body = "body is required";
       this.valid = false;
     }
 
@@ -42,11 +42,11 @@ export class HeroComponent {
       return;
     }
     
-    this.submit.emit({ image, cta });
+    this.submit.emit({ body, cta });
   }
 }
 
 interface Errors {
-  image: boolean | string;
+  body: boolean | string;
   cta: boolean | string;
 }

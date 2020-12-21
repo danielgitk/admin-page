@@ -1,10 +1,13 @@
 <div cdkDropList (cdkDropListDropped)="inputDrop($event)">
-    <div class="form-group" cdkDrag *ngFor="let field of inputFields; let i = index;" [class.invalid]="errors.inputFields[i]">
+    <input  type="checkbox">Include text area for a comment form
+    <div class="form-group" cdkDrag *ngFor="let field of inputFields; let i = index;" [class.invalid]="errors.inputFieldsError[i]">
       <label>Input Label</label>
       <div class="flex">
         <div class="right">
-            <input type="text" [value]="data?.body" class="form-control">
-          <!-- <media-picker #media [defaultValue]="partner" (change)="handleChange(i, media.value)"></media-picker> -->
+          <label *ngIf="value?.label" class="preview rounded bg">{{value}}</label>
+          <input [value]="value.label" type="text" class="label form-control">
+            <!-- <input type="text" class="form-control" (change)="handleChange(i,inputFields.label)"> -->
+            <!-- <media-picker #media [defaultValue]="partner" (change)="handleChange(i, media.value)"></media-picker> -->
         </div>
         <div class="left" *ngIf="i > 0">
           <button class="btn btn-danger" (click)="removeField($event, i)">
@@ -12,8 +15,12 @@
           </button>
         </div>
       </div>
-      <p class="error-response" *ngIf="errors.inputFields[i]">{{errors.inputFields[i]}}</p>
+      <p class="error-response" *ngIf="errors.inputFieldsError[i]">{{errors.inputFieldsError[i]}}</p>
     </div>
+    <!-- <div class="form-group">
+      <label></label>
+      <textarea class="form-group"></textarea>
+    </div> -->
 </div>
 <div class="form-group add-partner-btn-con">
     <button class="btn btn-action" (click)="addField()">Add field</button>

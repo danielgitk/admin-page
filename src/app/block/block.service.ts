@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Block } from "../interfaces";
 import { RequestService } from "../request.service";
 import { Router } from "@angular/router";
+import { input } from "../interfaces/inputField";
 
 const RESOURCE_PATH: string = "api/blocks/";
 
@@ -9,6 +10,9 @@ const RESOURCE_PATH: string = "api/blocks/";
   providedIn: "root"
 })
 export class BlockService {
+  inputFieldList: input[] = [];
+  cache: object = {};
+
   type: string = 'text';
 
   errors: string[] = [];
@@ -54,7 +58,7 @@ export class BlockService {
         .subscribe(() => {});
       return;
     }
-
+    console.log(JSON.stringify(data))
     this.http
       .post("api/blocks", {
         type,

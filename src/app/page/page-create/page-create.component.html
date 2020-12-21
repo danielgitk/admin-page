@@ -15,14 +15,16 @@
           <p *ngIf="errors.title" class="error-response">{{errors.title}}</p>
         </div>
   
-        <div class="form-group" >
+        <div class="form-group chooseBlock" >
           <label for="type">Select block type</label>
           <select #inputType id="type" class="form-control" (change)="changeType(inputType.value)">
             <!-- <option value="hero">Hero block</option> -->
             <option value="two_columns">News block</option>
+            <option value="hero">Service block</option>
+            <!-- <option value="service">Service block</option> -->
             <option value="text">Text block</option>
             <option value="search">Search block</option>
-            <!-- <option value="tender_list">Search Result List</option> -->
+            <option value="comment_form">Comment block</option>
             <option value="partners">Partners block</option>
           </select>
         </div>

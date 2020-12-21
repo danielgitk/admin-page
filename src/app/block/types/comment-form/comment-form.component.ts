@@ -9,37 +9,41 @@ import { input } from 'src/app/interfaces/inputField';
   styleUrls: ['./comment-form.component.css']
 })
 export class CommentFormComponent implements OnInit {
+  @Input() defaultValue: false|input = false;
   @Input() data: any;
   @Output() submit: EventEmitter<any> = new EventEmitter();
+  @Output() change: EventEmitter<any> =  new EventEmitter();
 
   trashIcon = faTrashAlt;
+  value: input = {
+    // id: 0,
+    label: ""
+  };
+
+  // ID:number=this.value?.id;
 
   inputFields : input[] = [
-    {
-      label:""
-    }
+    this.value
   ]
 
   errors: Errors = {
-    inputFields:[]
+    inputFieldsError:[]
   }; 
 
   valid: boolean = true;
 
-  /**
-   * Validate data and emit submit event
-   
-   */
   validateData() {
     this.valid = true;
-    this.errors = { inputFields:[]};
+    this.errors = { inputFieldsError:[]};
 
-    // this.inputFields.map((input, i) => {
-    //   if (!input.label) {
-    //     this.errors.inputFields[i] = "Label is required";
-    //     this.valid = false;
-    //   }
-    // });
+    this.inputFields.map((inputVal, i) => {
+      if (!inputVal.label) {
+        // console.log()
+        this.errors.inputFieldsError[i] = "Label is required";
+        this.valid = false;
+      }
+    });
+    
 
     if (!this.valid) {
       this.submit.emit(false);
@@ -48,12 +52,12 @@ export class CommentFormComponent implements OnInit {
 
     this.submit.emit({ 
       inputFields: this.inputFields.map(field => ({ input: field }))
-
      });
   }
   addField(){
     this.inputFields = [
       ...this.inputFields,{
+        // id:0,
         label:""
       }
     ]
@@ -67,6 +71,26 @@ export class CommentFormComponent implements OnInit {
     inputFields.splice(index, 1);
     this.inputFields = inputFields;
   }
+  /* 
+  * @param index
+  * @param value
+  */
+  handleChange(index: number, value: input): void {
+    let inputFields = [...this.inputFields];
+    this.inputFields[index] = value;
+
+    this.inputFields = inputFields;
+  }
+  /*
+  * Handle changes
+  * 
+  * @param value 
+  */
+ onChange(value: input) {
+   this.value = { ...value };
+   this.change.emit({ value })
+ }
+
 
 
   constructor() { }
@@ -75,10 +99,14 @@ export class CommentFormComponent implements OnInit {
     if (!this.data) return;
 
     this.inputFields = this.data.inputFields.map((input: any) => input.label);
+    if(!this.defaultValue) return;
+    this.value = {
+      ...this.defaultValue
+    }
   }
 
 }
 
 interface Errors {
-  inputFields:string[];
+  inputFieldsError:object;
 }

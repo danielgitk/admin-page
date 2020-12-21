@@ -8,6 +8,9 @@ mat-card{
     height: auto;
    
 }
+.chooseBlock{
+  width: 50%;
+}
 .blocks-picker {
     width: 600px;
     display: flex;

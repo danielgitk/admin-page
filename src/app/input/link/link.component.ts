@@ -53,7 +53,7 @@ export class LinkComponent implements OnInit {
 
     if (!title) {
       this.valid = false;
-      this.errors.title = "Title is required";
+      this.errors.title = "Title is required"; 
     }
 
     if (!this.valid) return;

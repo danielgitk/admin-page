@@ -1,4 +1,4 @@
-<div class="topnav">
+<!-- <div class="topnav">
     <div class="search-container">
       <form>
         <input type="text" placeholder="Search.." name="search">
@@ -6,4 +6,13 @@
       </form>
     </div>
 </div>
-  
+   -->
+<div class="form-group">
+  <label for="place_holder">Place holder</label>
+  <input id="place_holder" [value]="data?.place_holder || defaultplace_holder" class="form-control" #place_holder />
+  <p class="error-response" *ngIf="errors.place_holder">{{errors.place_holder}}</p>
+</div>
+<div>
+  <button class="btn btn-success" (click)="validateData(place_holder.value)">Save</button>
+  <p class="error-response" *ngIf="!valid">Please fill all fields correctly</p>
+</div>

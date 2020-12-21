@@ -7,8 +7,9 @@
         <div class="form-group" *ngIf="!block">
           <label for="type">Select block type</label>
           <select #inputType id="type" class="form-control" [value]="type" (change)="changeType(inputType.value)">
-            <!-- <option value="hero">Hero block</option> -->
             <option value="two_columns">News block</option>
+            <option value="hero">Service block</option>
+            <!-- <option value="service">Service block</option> -->
             <option value="text">Text block</option>
             <option value="search">Search block</option>
             <option value="comment_form">Comment block</option>
@@ -23,10 +24,12 @@
         </div>
   
         <ng-container [ngSwitch]="type">
-          <!-- <block-hero *ngSwitchCase="'hero'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
-          </block-hero> -->
+          <block-hero *ngSwitchCase="'hero'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
+          </block-hero>
           <block-search *ngSwitchCase="'search'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
           </block-search>
+          <block-service *ngSwitchCase="'service'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
+          </block-service>
           <block-comment-form *ngSwitchCase="'comment_form'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
           </block-comment-form>
           <block-text *ngSwitchCase="'text'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">

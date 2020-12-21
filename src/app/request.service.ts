@@ -149,7 +149,7 @@ export class RequestService {
     // If the response is successful and sendSuccess is true,
     // send successful toast message to the user
     if (res.success && sendSuccess)
-      this.toast.success("Changes saved successfuly");
+      this.toast.success("Saved");
   }
 
   /**

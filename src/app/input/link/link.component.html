@@ -10,7 +10,7 @@
   
         <div class="form-group" [class.invalid]="errors.url">
           <label for="link_url">Url</label>
-          <input type="text" placeholder="/about-us" #url class="form-control" [value]="value.url">
+          <input type="text" placeholder="www.example.com" #url class="form-control" [value]="value.url">
           <p *ngIf="errors.url" class="error-response">{{errors.url}}</p>
         </div>
   

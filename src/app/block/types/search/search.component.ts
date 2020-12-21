@@ -9,11 +9,10 @@ export class SearchComponent implements OnInit {
   @Input() data: any;
   @Output() submit: EventEmitter<any> = new EventEmitter();
 
-  defaultColor: string = "#fff";
+  defaultplace_holder: string = "search...";
 
   errors: Errors = {
-    body: false,
-    color: false
+    place_holder: false
   };
 
   valid: boolean = true;
@@ -21,19 +20,14 @@ export class SearchComponent implements OnInit {
   /**
    * Validate data and emit submit event
    *
-   * @param body
-   * @param color
+   * @param place_holder
    */
-  validateData(body: string, color: string) {
+  validateData(place_holder: string) {
     this.valid = true;
-    this.errors = { body: false, color: false };
+    this.errors = { place_holder: false };
 
-    if (!body) {
-      this.errors.body = "Image is required";
-      this.valid = false;
-    }
-    if (!color) {
-      this.errors.color = "Color is required";
+    if (!place_holder) {
+      this.errors.place_holder = "Place holder is required";
       this.valid = false;
     }
 
@@ -42,7 +36,7 @@ export class SearchComponent implements OnInit {
       return;
     }
 
-    this.submit.emit({ body, color });
+    this.submit.emit({place_holder });
   }
 
   constructor() { }
@@ -53,6 +47,5 @@ export class SearchComponent implements OnInit {
 }
 
 interface Errors {
-  body: boolean | string;
-  color: boolean | string;
+  place_holder: boolean | string;
 }
