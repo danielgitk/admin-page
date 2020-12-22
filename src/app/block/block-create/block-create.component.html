@@ -9,11 +9,9 @@
           <select #inputType id="type" class="form-control" [value]="type" (change)="changeType(inputType.value)">
             <option value="two_columns">News block</option>
             <option value="hero">Service block</option>
-            <!-- <option value="service">Service block</option> -->
             <option value="text">Text block</option>
             <option value="search">Search block</option>
             <option value="comment_form">Comment block</option>
-            <!-- <option value="tender_list">Search Result List</option> -->
             <option value="partners">Partners block</option>
           </select>
         </div>
@@ -28,8 +26,6 @@
           </block-hero>
           <block-search *ngSwitchCase="'search'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
           </block-search>
-          <block-service *ngSwitchCase="'service'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
-          </block-service>
           <block-comment-form *ngSwitchCase="'comment_form'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">
           </block-comment-form>
           <block-text *ngSwitchCase="'text'" (submit)="submitHandler(title.value, $event)" [data]="block?.data">

@@ -45,7 +45,6 @@ import { CommentFormComponent } from './block/types/comment-form/comment-form.co
 import { SearchComponent } from './block/types/search/search.component';
 import { OverlayBlockCreateComponent } from './block/block-create copy/block-create.component';
 import { LabelComponent } from './input/label/label.component';
-import { ServiceComponent } from './block/types/service/service.component';
 
 @NgModule({
   declarations: [
@@ -83,8 +82,7 @@ import { ServiceComponent } from './block/types/service/service.component';
     FootersComponent,
     CommentFormComponent,
     SearchComponent,
-    LabelComponent,
-    ServiceComponent
+    LabelComponent
   ],
   imports: [
     BrowserModule,
